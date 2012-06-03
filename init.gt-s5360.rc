@@ -272,15 +272,6 @@ on property:persist.sys.camera-mute=0
 on property:persist.sys.camera-mute=1
     start toggleshutter
 
-# From init.gt-i5500.rc by subpsyke
-service get_macaddrs /system/bin/get_macaddrs
-    user root
-    oneshot
-    disabled
-
-on property:init.svc.ril-daemon=running
-    start get_macaddrs
-
 # bugreport is triggered by holding down the KEY_VOLUMEUP and KEY_HOME keycodes
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled

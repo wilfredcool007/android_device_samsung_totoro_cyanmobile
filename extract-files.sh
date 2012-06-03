@@ -114,6 +114,7 @@ adb pull /system/bin/memsicd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/b
 adb pull /system/lib/egl/libGLES_hgl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
 adb pull /system/lib/egl/egl.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
 adb pull /system/lib/libdhwr.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libDHWRCN.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdprw.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdrm2_jni.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -226,6 +227,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/egl/libGLES_hgl.so:system/lib/egl/libGLES_hgl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/egl/egl.cfg:system/lib/egl/egl.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdhwr.so:system/lib/libdhwr.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libDHWRCN.so:system/lib/libDHWRCN.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdprw.so:system/lib/libdprw.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdrm2_jni.so:system/lib/libdrm2_jni.so \\

@@ -88,28 +88,16 @@ PRODUCT_COPY_FILES += \
 # Board-specific init
 PRODUCT_COPY_FILES += \
     device/samsung/totoro/ueventd.gt-s5360.rc:root/ueventd.gt-s5360.rc \
-    device/samsung/totoro/ueventd.gt-s5360.rc:recovery/root/ueventd.gt-s5360.rc \
     device/samsung/totoro/prebuilt/fsr.ko:root/fsr.ko \
     device/samsung/totoro/prebuilt/fsr_stl.ko:root/fsr_stl.ko \
     device/samsung/totoro/prebuilt/rfs_fat.ko:root/rfs_fat.ko \
     device/samsung/totoro/prebuilt/rfs_glue.ko:root/rfs_glue.ko \
     device/samsung/totoro/prebuilt/j4fs.ko:root/j4fs.ko \
-    device/samsung/totoro/prebuilt/fsr.ko:recovery/root/fsr.ko \
-    device/samsung/totoro/prebuilt/fsr_stl.ko:recovery/root/fsr_stl.ko \
-    device/samsung/totoro/prebuilt/rfs_fat.ko:recovery/root/rfs_fat.ko \
-    device/samsung/totoro/prebuilt/rfs_glue.ko:recovery/root/rfs_glue.ko \
-    device/samsung/totoro/prebuilt/j4fs.ko:recovery/root/j4fs.ko \
-    device/samsung/totoro/prebuilt/fota_logo.png:recovery/root/sbin/fota_logo.png \
-    device/samsung/totoro/prebuilt/ua_launcher:recovery/root/sbin/ua_launcher \
     device/samsung/totoro/prebuilt/fota_logo.png:root/sbin/fota_logo.png \
     device/samsung/totoro/prebuilt/ua_launcher:root/sbin/ua_launcher \
     device/samsung/totoro/prebuilt/sec_param.ko:root/sec_param.ko \
-    device/samsung/totoro/prebuilt/sec_param.ko:recovery/root/sec_param.ko \
-    device/samsung/totoro/fota.rc:recovery/root/fota.rc \
     device/samsung/totoro/fota.rc:root/fota.rc \
     device/samsung/totoro/init.rc:root/init.rc \
-    device/samsung/totoro/init.rc:recovery/root/init.rc \
-    device/samsung/totoro/init.gt-s5360.rc:recovery/root/init.gt-s5360.rc \
     device/samsung/totoro/init.gt-s5360.rc:root/init.gt-s5360.rc
 
 PRODUCT_COPY_FILES += \
@@ -173,7 +161,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/modules/ge_drv.ko:system/lib/modules/ge_drv.ko \
     device/samsung/totoro/prebuilt/modules/gememalloc.ko:system/lib/modules/gememalloc.ko \
     device/samsung/totoro/prebuilt/modules/h6270enc.ko:system/lib/modules/h6270enc.ko \
-    device/samsung/totoro/prebuilt/modules/hx170dec.ko:system/lib/modules/hx170dec.ko \
+    device/samsung/totoro/prebuilt/modules/hx170dec.ko:system/lib/modules/hx170dec.ko
 
 # See comment at the top of this file. This is where the other
 # half of the device-specific product definition file takes care
