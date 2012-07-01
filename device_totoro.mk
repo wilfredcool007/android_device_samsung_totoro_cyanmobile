@@ -33,7 +33,6 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 #  $(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
 
 PRODUCT_PACKAGES += \
-    make_ext4fs \
     setup_fs \
     SamsungServiceMode \
     bdaddr_read \
@@ -43,8 +42,7 @@ PRODUCT_PACKAGES += \
     dump_image \
     e2fsck \
     erase_image \
-    flash_image \
-    screencap
+    flash_image
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
       LOCAL_KERNEL := device/samsung/totoro/kernel
