@@ -39,8 +39,9 @@ BOARD_FM_DEVICE := bcm4329
 
 # Camera
 USE_CAMERA_STUB := true
-BOARD_V4L2_DEVICE := /dev/video2
-BOARD_CAMERA_DEVICE := /dev/video0
+# we not need this (need haxx to the kernel)
+#BOARD_V4L2_DEVICE := /dev/video2
+#BOARD_CAMERA_DEVICE := /dev/video0
 BOARD_USE_JPEG := true
 
 # 2d/3d
