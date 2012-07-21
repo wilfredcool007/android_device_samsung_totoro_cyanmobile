@@ -21,7 +21,7 @@
 #include "extendedcommands.h"
 
 //char* MENU_HEADERS[] = { NULL };
-char* MENU_HEADERS[] = { "Galaxy Young [Gyng]",
+char* MENU_HEADERS[] = { "Galaxy Young [Totoro]",
                          NULL };
 
 char* MENU_ITEMS[] = { "reboot system now",
