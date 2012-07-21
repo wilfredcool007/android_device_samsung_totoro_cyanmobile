@@ -104,6 +104,50 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/dbus.conf:system/etc/dbus.conf \
     device/samsung/totoro/recovery.fstab:recovery/root/etc/recovery.fstab 
 
+#audio
+PRODUCT_COPY_FILES += \
+#vendor/samsung/totoro/proprietary/system/lib/liba2dp.so:system/lib/liba2dp.so \
+vendor/samsung/totoro/proprietary/system/lib/libaudio.so:system/lib/libaudio.so \
+vendor/samsung/totoro/proprietary/system/lib/liblvvefs.so:system/lib/liblvvefs.so \
+vendor/samsung/totoro/proprietary/system/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \
+vendor/samsung/totoro/proprietary/system/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
+vendor/samsung/totoro/proprietary/system/lib/lib_Samsung_Sound_Booster.so:system/lib/lib_Samsung_Sound_Booster.so \
+vendor/samsung/totoro/proprietary/system/lib/libsamsungAcousticeq.so:system/lib/libsamsungAcousticeq.so \
+vendor/samsung/totoro/proprietary/system/lib/lib_Samsung_Acoustic_Module_Llite.so:system/lib/lib_Samsung_Acoustic_Module_Llite.so \
+vendor/samsung/totoro/proprietary/system/lib/libsoundalive.so:system/lib/libsoundalive.so \
+vendor/samsung/totoro/proprietary/system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so:system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so \
+vendor/samsung/totoro/proprietary/system/lib/libmedia.so:system/lib/libmedia.so \
+vendor/samsung/totoro/proprietary/system/lib/libaudioflinger.so:system/lib/libaudioflinger.so \
+vendor/samsung/totoro/proprietary/system/bin/mediaserver:system/bin/mediaserver \
+#vendor/samsung/totoro/proprietary/system/lib/libsisodrm.so:system/lib/libsisodrm.so \
+#vendor/samsung/totoro/proprietary/system/lib/libomadrm.so:system/lib/libomadrm.so \
+#vendor/samsung/totoro/proprietary/system/lib/librs_jni.so:system/lib/librs_jni.so \
+#vendor/samsung/totoro/proprietary/system/lib/libRS.so:system/lib/libRS.so \
+
+
+
+#mediaplayer
+PRODUCT_COPY_FILES += \
+vendor/samsung/totoro/proprietary/system/lib/libBRCM_omx_core.so:system/lib/libBRCM_omx_core.so \
+vendor/samsung/totoro/proprietary/system/lib/libBRCM_omx_core_plugin.so:system/lib/libBRCM_omx_core_plugin.so \
+vendor/samsung/totoro/proprietary/system/lib/invoke_mock_media_player.so:system/lib/invoke_mock_media_player.so \
+vendor/samsung/totoro/proprietary/system/lib/libomx_aacdec_sharedlibrary.so:system/lib/libomx_aacdec_sharedlibrary.so \
+vendor/samsung/totoro/proprietary/system/lib/libomx_amrdec_sharedlibrary.so:system/lib/libomx_amrdec_sharedlibrary.so \
+vendor/samsung/totoro/proprietary/system/lib/libomx_avcdec_sharedlibrary.so:system/lib/libomx_avcdec_sharedlibrary.so \
+vendor/samsung/totoro/proprietary/system/lib/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \
+vendor/samsung/totoro/proprietary/system/lib/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \
+vendor/samsung/totoro/proprietary/system/lib/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_author.so:system/lib/libopencore_author.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_common.so:system/lib/libopencore_common.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_mp4local.so:system/lib/libopencore_mp4local.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_mp4localreg.so:system/lib/libopencore_mp4localreg.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_net_support.so:system/lib/libopencore_net_support.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_player.so:system/lib/libopencore_player.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_rtsp.so:system/lib/libopencore_rtsp.so \
+#vendor/samsung/totoro/proprietary/system/lib/libopencore_rtspreg.so:system/lib/libopencore_rtspreg.so \
+#vendor/samsung/totoro/proprietary/system/lib/libOpenSLES.so:system/lib/llibOpenSLES.so \
+vendor/samsung/totoro/proprietary/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
+
 # Keyboard maps
 PRODUCT_COPY_FILES += \
 	device/samsung/totoro/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
