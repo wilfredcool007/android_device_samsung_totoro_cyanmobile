@@ -1,6 +1,22 @@
 #
 # system.prop for GT-S5360
 #
+
+
+#deox
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+dalvik.vm.startheapsize=32m
+#dalvik.vm.dexopt-data-only=1
+dalvik.vm.dexopt-flags=m=y
+dalvik.vm.heapsize=64m
+dalvik.vm.checkjni=false
+dalvik.vm.dexopt-flags=m=y
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.heapsize=64m
+dalvik.vm.dexopt-data-only=1
+ro.kernel.android.checkjni=1
+
+
 ro.ril.ntmodeglobal=true
 
 rild.libpath=/system/lib/libbrcm_ril.so
@@ -66,11 +82,9 @@ alsa.mixer.capture.bt.a2dp=BTHeadset
 ro.com.google.locationfeatures=1
 ro.setupwizard.enable_bypass=1
 dalvik.vm.lockprof.threshold=500
-dalvik.vm.execution-mode=int:jit
 ro.config.hw_menu_unlockscreen=false
 media.stagefright.enable-player=false
 persist.sys.vold.switchexternal=1
-dalvik.vm.heapsize=32m
 persist.sys.purgeable_assets=0
 ro.compcache.default=0
 persist.sys.use_dithering=0
