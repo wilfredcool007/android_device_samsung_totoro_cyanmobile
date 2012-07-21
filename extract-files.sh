@@ -18,6 +18,7 @@ DEVICE=totoro
 MANUFACTURER=samsung
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
@@ -56,7 +57,6 @@ adb pull /system/lib/libomx_mp3dec_sharedlibrary.so ../../../vendor/$MANUFACTURE
 adb pull /system/lib/libomx_sharedlibrary.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
 # opencore
-
 adb pull /system/lib/libopencore_common.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libopencore_author.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libopencore_mp4local.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -104,12 +104,52 @@ adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprieta
 adb pull /system/lib/libaudiopolicy.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/hw/acoustics.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/lib/hw/alsa.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
+adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/lib_Samsung_Resampler.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libsamsungSoundbooster.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/lib_Samsung_Sound_Booster.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libsamsungAcousticeq.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libsoundalive.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libmedia.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libaudioflinger.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/bin/mediaserver ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/lib/invoke_mock_media_player.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
 # gps
 adb pull /system/lib/hw/gps.bcm21553.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/lib/hw/gps.goldfish.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/bin/glgps ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/gps.cer ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+
+# charging
+adb pull /system/media/battery_charging_5.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_10.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_15.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_20.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_25.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_30.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_35.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_40.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_45.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_50.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_55.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_60.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_65.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_70.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_75.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_80.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_85.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_90.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_95.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/battery_charging_100.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/chargingwarning.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/Disconnected.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/TemperatureError.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/bin/charging_mode ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/lib/libQmageDecoder.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libquramimagecodec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
 # lights
 adb pull /system/lib/hw/lights.bcm21553.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
@@ -198,6 +238,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libQmageDecoder.so:system/lib/libQmageDecoder.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so
 
 ## Bluetooth
@@ -206,16 +247,57 @@ PRODUCT_COPY_FILES += \\
 
 ## Wifi
 PRODUCT_COPY_FILES += \
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wlandutservice:system/bin/wlandutservice
 	
+## charging
+PRODUCT_COPY_FILES += \
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_5.qmg:system/media/battery_charging_5.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_10.qmg:system/media/battery_charging_10.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_15.qmg:system/media/battery_charging_15.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_20.qmg:system/media/battery_charging_20.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_25.qmg:system/media/battery_charging_25.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_30.qmg:system/media/battery_charging_30.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_35.qmg:system/media/battery_charging_35.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_40.qmg:system/media/battery_charging_40.qmg \\ 
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_45.qmg:system/media/battery_charging_45.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_50.qmg:system/media/battery_charging_50.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_55.qmg:system/media/battery_charging_55.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_60.qmg:system/media/battery_charging_60.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_65.qmg:system/media/battery_charging_65.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_70.qmg:system/media/battery_charging_70.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_75.qmg:system/media/battery_charging_75.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_80.qmg:system/media/battery_charging_80.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_85.qmg:system/media/battery_charging_85.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_90.qmg:system/media/battery_charging_90.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_95.qmg:system/media/battery_charging_95.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_100.qmg:system/media/battery_charging_100.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/chargingwarning.qmg:system/media/chargingwarning.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/Disconnected.qmg:system/media/Disconnected.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/TemperatureError.qmg:system/media/TemperatureError.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/charging_mode:system/bin/charging_mode \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libQmageDecoder.so:system/lib/libQmageDecoder.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libquramimagecodec.so:system/lib/libquramimagecodec.so
+
 ## Audio
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/acoustics.default.so:system/lib/hw/acoustics.default.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/alsa.default.so:system/lib/hw/alsa.default.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/alsa.default.so:system/lib/hw/alsa.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_Samsung_Sound_Booster.so:system/lib/lib_Samsung_Sound_Booster.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsamsungAcousticeq.so:system/lib/libsamsungAcousticeq.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_Samsung_Acoustic_Module_Llite.so:system/lib/lib_Samsung_Acoustic_Module_Llite.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsoundalive.so:system/lib/libsoundalive.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so:system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmedia.so:system/lib/libmedia.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudioflinger.so:system/lib/libaudioflinger.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mediaserver:system/bin/mediaserver \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/invoke_mock_media_player.so:system/lib/invoke_mock_media_player.so
 
 ##GPS
 PRODUCT_COPY_FILES += \\
