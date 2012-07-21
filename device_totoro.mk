@@ -106,7 +106,6 @@ PRODUCT_COPY_FILES += \
 
 #audio
 PRODUCT_COPY_FILES += \
-#vendor/samsung/totoro/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \
 vendor/samsung/totoro/proprietary/lib/libaudio.so:system/lib/libaudio.so \
 vendor/samsung/totoro/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \
 vendor/samsung/totoro/proprietary/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \
@@ -123,6 +122,7 @@ vendor/samsung/totoro/proprietary/bin/mediaserver:system/bin/mediaserver \
 #vendor/samsung/totoro/proprietary/lib/libomadrm.so:system/lib/libomadrm.so \
 #vendor/samsung/totoro/proprietary/lib/librs_jni.so:system/lib/librs_jni.so \
 #vendor/samsung/totoro/proprietary/lib/libRS.so:system/lib/libRS.so \
+#vendor/samsung/totoro/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \
 
 
 
@@ -146,7 +146,7 @@ vendor/samsung/totoro/proprietary/lib/libomx_sharedlibrary.so:system/lib/libomx_
 #vendor/samsung/totoro/proprietary/lib/libopencore_rtsp.so:system/lib/libopencore_rtsp.so \
 #vendor/samsung/totoro/proprietary/lib/libopencore_rtspreg.so:system/lib/libopencore_rtspreg.so \
 #vendor/samsung/totoro/proprietary/lib/libOpenSLES.so:system/lib/llibOpenSLES.so \
-vendor/samsung/totoro/proprietary/etc/media_profiles.xml:system/etc/media_profiles.xml \
+
 
 # Keyboard maps
 PRODUCT_COPY_FILES += \
