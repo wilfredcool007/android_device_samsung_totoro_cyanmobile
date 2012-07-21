@@ -148,6 +148,7 @@ adb pull /system/media/chargingwarning.qmg ../../../vendor/$MANUFACTURER/$DEVICE
 adb pull /system/media/Disconnected.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/media/TemperatureError.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/bin/charging_mode ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/playlpm ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/lib/libQmageDecoder.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libquramimagecodec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
@@ -275,6 +276,7 @@ PRODUCT_COPY_FILES += \
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/Disconnected.qmg:system/media/Disconnected.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/TemperatureError.qmg:system/media/TemperatureError.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/charging_mode:system/bin/charging_mode \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/playlpm:system/bin/playlpm \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libQmageDecoder.so:system/lib/libQmageDecoder.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libquramimagecodec.so:system/lib/libquramimagecodec.so
 

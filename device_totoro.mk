@@ -96,6 +96,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/sec_param.ko:root/sec_param.ko \
     device/samsung/totoro/fota.rc:root/fota.rc \
     device/samsung/totoro/init.rc:root/init.rc \
+    device/samsung/totoro/init.charge.rc:root/init.charge.rc \
     device/samsung/totoro/init.gt-s5360.rc:root/init.gt-s5360.rc
 
 PRODUCT_COPY_FILES += \
