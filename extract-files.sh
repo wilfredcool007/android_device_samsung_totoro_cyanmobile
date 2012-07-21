@@ -82,6 +82,7 @@ adb pull /system/lib/libcameraservice.so ../../../vendor/$MANUFACTURER/$DEVICE/p
 # bluetooth
 adb pull /system/bin/BCM4330B1_002.001.003.0634.0652.hcd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/btld ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/ip ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 
 # wifi
 adb pull /system/bin/mfgloader ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
@@ -163,6 +164,11 @@ adb pull /system/lib/hw/lights.bcm21553.so ../../../vendor/$MANUFACTURER/$DEVICE
 adb pull /system/lib/hw/sensors.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/lib/hw/sensors.goldfish.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/bin/memsicd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/lib/libacc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libaccelcal.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libaccsensorcal.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libaccsensorcaltest.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+
 
 # egl
 adb pull /system/lib/egl/libGLES_hgl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
@@ -244,8 +250,9 @@ PRODUCT_COPY_FILES += \\
 
 ## Bluetooth
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/BCM4330B1_002.001.003.0634.0652.hcd:system/bin/BCM4330B1_002.001.003.0634.0652.hcd \
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/btld:system/bin/btld
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/BCM4330B1_002.001.003.0634.0652.hcd:system/bin/BCM4330B1_002.001.003.0634.0652.hcd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ip:system/bin/ip
 
 ## Wifi
 PRODUCT_COPY_FILES += \
@@ -338,7 +345,11 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/sensors.goldfish.so:system/lib/hw/sensors.goldfish.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/memsicd:system/bin/memsicd 
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/memsicd:system/bin/memsicd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libacc.so:system/lib/libacc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaccelcal.so:system/lib/libaccelcal.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaccsensorcal.so:system/lib/libaccsensorcal.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaccsensorcaltest.so:system/lib/libaccsensorcaltest.so
 EOF
 
 ./setup-makefiles.sh

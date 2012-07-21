@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     gralloc.default \
     overlay.default \
     libhardware \
+    libhardware_legacy \
     rzscontrol \
     libOmxCore \
     brcm_patchram_plus \
