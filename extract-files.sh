@@ -81,6 +81,7 @@ adb pull /system/lib/libcameraservice.so ../../../vendor/$MANUFACTURER/$DEVICE/p
 
 # bluetooth
 adb pull /system/bin/BCM4330B1_002.001.003.0634.0652.hcd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/btld ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 
 # wifi
 adb pull /system/bin/mfgloader ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
@@ -243,7 +244,8 @@ PRODUCT_COPY_FILES += \\
 
 ## Bluetooth
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/BCM4330B1_002.001.003.0634.0652.hcd:system/bin/BCM4330B1_002.001.003.0634.0652.hcd
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/BCM4330B1_002.001.003.0634.0652.hcd:system/bin/BCM4330B1_002.001.003.0634.0652.hcd \
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/btld:system/bin/btld
 
 ## Wifi
 PRODUCT_COPY_FILES += \
