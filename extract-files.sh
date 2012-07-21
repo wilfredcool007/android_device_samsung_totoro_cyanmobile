@@ -156,7 +156,7 @@ adb pull /system/lib/libquramimagecodec.so ../../../vendor/$MANUFACTURER/$DEVICE
 adb pull /system/lib/hw/lights.bcm21553.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 
 # gralloc
-adb pull /system/lib/hw/gralloc.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
+# adb pull /system/lib/hw/gralloc.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 
 # sensor
 adb pull /system/lib/hw/sensors.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
@@ -314,8 +314,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/lights.bcm21553.so:system/lib/hw/lights.totoro.so
 
 ## Gralloc
-PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/gralloc.default.so:system/lib/hw/gralloc.default.so
+## PRODUCT_COPY_FILES += \\
+##    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/gralloc.default.so:system/lib/hw/gralloc.default.so
 
 ## 3D
 PRODUCT_COPY_FILES += \\

@@ -39,6 +39,13 @@ PRODUCT_PACKAGES += \
     toggleshutter \
     patchlcs \
     dexpreopt \
+    make_ext4fs \
+    gralloc.default \
+    overlay.default \
+    libhardware \
+    rzscontrol \
+    libOmxCore \
+    brcm_patchram_plus \
     dump_image \
     e2fsck \
     erase_image \

@@ -33,8 +33,11 @@ on early-fs
 
 on fs
     mount tmpfs tmpfs /tmp
+    mount ext4 /dev/block/stl9 /system rw remount wait noatime nodiratime noauto_da_alloc
     mount rfs /dev/stl9 /system nosuid nodev check=no
+    mount ext4 /dev/block/stl11 /data wait nosuid nodev noatime nodiratime noauto_da_alloc
     mount rfs /dev/stl11 /data nosuid nodev check=no
+    mount ext4 /dev/block/stl10 /cache wait nosuid nodev noatime nodiratime noauto_da_alloc
     mount rfs /dev/stl10 /cache nosuid nodev
     mount j4fs /dev/stl6 /mnt/.lfs 
 
