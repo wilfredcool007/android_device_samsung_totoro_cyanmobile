@@ -164,6 +164,7 @@ adb pull /system/lib/hw/lights.bcm21553.so ../../../vendor/$MANUFACTURER/$DEVICE
 adb pull /system/lib/hw/sensors.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/lib/hw/sensors.goldfish.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/bin/memsicd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/atx ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/lib/libacc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libaccelcal.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libaccsensorcal.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -346,6 +347,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/sensors.goldfish.so:system/lib/hw/sensors.goldfish.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/memsicd:system/bin/memsicd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/atx:system/bin/atx \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libacc.so:system/lib/libacc.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaccelcal.so:system/lib/libaccelcal.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaccsensorcal.so:system/lib/libaccsensorcal.so \\
