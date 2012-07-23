@@ -10,10 +10,7 @@ dalvik.vm.startheapsize=32m
 dalvik.vm.dexopt-flags=m=y
 dalvik.vm.heapsize=64m
 dalvik.vm.checkjni=false
-dalvik.vm.dexopt-flags=m=y
 dalvik.vm.execution-mode=int:jit
-dalvik.vm.heapsize=64m
-dalvik.vm.dexopt-data-only=1
 ro.kernel.android.checkjni=1
 
 
@@ -84,7 +81,6 @@ ro.setupwizard.enable_bypass=1
 dalvik.vm.lockprof.threshold=500
 ro.config.hw_menu_unlockscreen=false
 media.stagefright.enable-player=false
-persist.sys.vold.switchexternal=1
 persist.sys.purgeable_assets=0
 ro.compcache.default=0
 persist.sys.use_dithering=0
