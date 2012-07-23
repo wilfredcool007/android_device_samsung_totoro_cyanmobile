@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
     patchlcs \
     dexpreopt \
     make_ext4fs \
-    gralloc.default \
     overlay.default \
     libhardware \
     libhardware_legacy \

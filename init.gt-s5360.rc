@@ -180,6 +180,12 @@ service btld /system/bin/logwrapper /system/bin/btld -hb 3000000 -hp /dev/ttyS1 
     disabled
     oneshot
 
+service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm --baudrate 3000000 --patchram /system/bin/BCM4330B1_002.001.003.0634.0652.hcd /dev/ttyHS0
+	user bluetooth
+	group bluetooth net_bt_admin
+	disabled
+	oneshot
+
 service gpsd /system/bin/glgps -c /system/etc/gps/glconfig4751.xml
     user gps
     group system sdcard_rw inet
