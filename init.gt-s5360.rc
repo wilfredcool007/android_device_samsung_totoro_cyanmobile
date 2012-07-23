@@ -1,3 +1,25 @@
+on init
+
+# Insert modules
+    # rfs drivers
+    insmod fsr.ko
+    insmod fsr_stl.ko
+    insmod rfs_glue.ko
+    insmod rfs_fat.ko
+    insmod sec_param.ko
+    insmod j4fs.ko
+
+on fs
+# Mount partitions
+    mount tmpfs tmpfs /tmp
+    mount rfs /dev/stl9 /system nosuid nodev check=no
+mount ext4 /dev/stl9 /system rw noatime barrier=1
+    mount rfs /dev/stl11 /data nosuid nodev check=no
+mount ext4 /dev/stl11 /data nosuid nodev noatime barrier=1
+    mount rfs /dev/stl10 /cache nosuid nodev
+mount ext4 /dev/stl10 /cache nosuid nodev noatime barrier=1
+    mount j4fs /dev/stl6 /mnt/.lfs 
+
 on post-fs
 
 # permissions for system server and daemons (accelerometer & magnetic & proximity)
