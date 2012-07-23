@@ -94,6 +94,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/totoro/ueventd.gt-s5360.rc:root/ueventd.gt-s5360.rc \
     device/samsung/totoro/prebuilt/fsr.ko:root/fsr.ko \
+    device/samsung/totoro/prebuilt/modules/dhd.ko:root/lib/modules/dhd.ko \
     device/samsung/totoro/prebuilt/fsr_stl.ko:root/fsr_stl.ko \
     device/samsung/totoro/prebuilt/rfs_fat.ko:root/rfs_fat.ko \
     device/samsung/totoro/prebuilt/rfs_glue.ko:root/rfs_glue.ko \
