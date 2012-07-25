@@ -38,18 +38,13 @@ PRODUCT_PACKAGES += \
     bdaddr_read \
     toggleshutter \
     patchlcs \
-    dexpreopt \
-    make_ext4fs \
     overlay.default \
     libhardware \
     libhardware_legacy \
     rzscontrol \
     libOmxCore \
-    brcm_patchram_plus \
-    dump_image \
     e2fsck \
-    erase_image \
-    flash_image
+    screencap
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
       LOCAL_KERNEL := device/samsung/totoro/kernel
@@ -163,6 +158,7 @@ PRODUCT_COPY_FILES += \
 # module
 PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/modules/brcm-headsetsw.ko:system/lib/modules/brcm-headsetsw.ko \
+    device/samsung/totoro/prebuilt/modules/bcm_headsetsw.ko:system/lib/modules/bcm_headsetsw.ko \
     device/samsung/totoro/prebuilt/modules/brcm_switch.ko:system/lib/modules/brcm_switch.ko \
     device/samsung/totoro/prebuilt/modules/dhd.ko:system/lib/modules/dhd.ko \
     device/samsung/totoro/prebuilt/modules/ge_drv.ko:system/lib/modules/ge_drv.ko \

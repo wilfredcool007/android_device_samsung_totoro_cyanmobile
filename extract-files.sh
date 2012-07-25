@@ -101,6 +101,8 @@ adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUF
 adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
 # audio
+adb pull /system/lib/libasound.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libharfbuzz.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/liba2dp.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libaudiopolicy.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -146,11 +148,14 @@ adb pull /system/media/battery_charging_85.qmg ../../../vendor/$MANUFACTURER/$DE
 adb pull /system/media/battery_charging_90.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/media/battery_charging_95.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/media/battery_charging_100.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/bootsamsung.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
+adb pull /system/media/bootsamsungloop.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/media/chargingwarning.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/media/Disconnected.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/media/TemperatureError.qmg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/media
 adb pull /system/bin/charging_mode ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/playlpm ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/samsungani ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/lib/libQmageDecoder.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libquramimagecodec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
@@ -178,6 +183,7 @@ adb pull /system/lib/libdhwr.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietar
 adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libDHWRCN.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdprw.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libdrm2.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdrm2_jni.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libDWP.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libomadrm.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -282,16 +288,21 @@ PRODUCT_COPY_FILES += \
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_90.qmg:system/media/battery_charging_90.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_95.qmg:system/media/battery_charging_95.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_100.qmg:system/media/battery_charging_100.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/bootsamsung.qmg:system/media/bootsamsung.qmg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/bootsamsungloop.qmg:system/media/bootsamsungloop.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/chargingwarning.qmg:system/media/chargingwarning.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/Disconnected.qmg:system/media/Disconnected.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/TemperatureError.qmg:system/media/TemperatureError.qmg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/charging_mode:system/bin/charging_mode \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/playlpm:system/bin/playlpm \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/samsungani:system/bin/samsungani \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libQmageDecoder.so:system/lib/libQmageDecoder.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libquramimagecodec.so:system/lib/libquramimagecodec.so
 
 ## Audio
 PRODUCT_COPY_FILES += \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libasound.so:system/lib/libasound.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libharfbuzz.so:system/lib/libharfbuzz.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so \\
@@ -335,6 +346,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libDHWRCN.so:system/lib/libDHWRCN.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdprw.so:system/lib/libdprw.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdrm2.so:system/lib/libdrm2.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdrm2_jni.so:system/lib/libdrm2_jni.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libDWP.so:system/lib/libDWP.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libomadrm.so:system/lib/libomadrm.so \\
