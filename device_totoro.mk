@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     SamsungServiceMode \
     bdaddr_read \
     toggleshutter \
+    libui \
     patchlcs \
     overlay.default \
     libhardware \
