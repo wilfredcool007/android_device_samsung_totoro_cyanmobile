@@ -38,6 +38,8 @@ PRODUCT_PACKAGES += \
     bdaddr_read \
     toggleshutter \
     libui \
+    alsa.default \
+    acoustics.default \
     patchlcs \
     overlay.default \
     libhardware \

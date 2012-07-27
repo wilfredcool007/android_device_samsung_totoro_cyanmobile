@@ -106,8 +106,6 @@ adb pull /system/lib/libharfbuzz.so ../../../vendor/$MANUFACTURER/$DEVICE/propri
 adb pull /system/lib/liba2dp.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libaudiopolicy.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
-adb pull /system/lib/hw/acoustics.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
-adb pull /system/lib/hw/alsa.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/lib_Samsung_Resampler.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libsamsungSoundbooster.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -116,9 +114,6 @@ adb pull /system/lib/libsamsungAcousticeq.so ../../../vendor/$MANUFACTURER/$DEVI
 adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libsoundalive.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
-adb pull /system/lib/libmedia.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
-adb pull /system/lib/libaudioflinger.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
-adb pull /system/bin/mediaserver ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/lib/invoke_mock_media_player.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
 # gps
@@ -305,8 +300,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudio.so:system/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/acoustics.default.so:system/lib/hw/acoustics.default.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/alsa.default.so:system/lib/hw/alsa.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \\
@@ -315,9 +308,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_Samsung_Acoustic_Module_Llite.so:system/lib/lib_Samsung_Acoustic_Module_Llite.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsoundalive.so:system/lib/libsoundalive.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so:system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmedia.so:system/lib/libmedia.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudioflinger.so:system/lib/libaudioflinger.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mediaserver:system/bin/mediaserver \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/invoke_mock_media_player.so:system/lib/invoke_mock_media_player.so
 
 ##GPS
