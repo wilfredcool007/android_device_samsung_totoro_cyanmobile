@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/totoro/ueventd.gt-s5360.rc:root/ueventd.gt-s5360.rc \
     device/samsung/totoro/prebuilt/fsr.ko:root/fsr.ko \
-    device/samsung/totoro/prebuilt/modules/dhd.ko:root/lib/modules/dhd.ko \
+    device/samsung/totoro/prebuilt/modules/dhd.ko:root/lib/modules/bcm4330.ko \
     device/samsung/totoro/prebuilt/fsr_stl.ko:root/fsr_stl.ko \
     device/samsung/totoro/prebuilt/rfs_fat.ko:root/rfs_fat.ko \
     device/samsung/totoro/prebuilt/rfs_glue.ko:root/rfs_glue.ko \
@@ -153,14 +153,26 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/etc/modem.sh:system/etc/modem.sh \
     device/samsung/totoro/prebuilt/etc/rndis.sh:system/etc/rndis.sh \
     device/samsung/totoro/prebuilt/etc/usbconfig.sh:system/etc/usbconfig.sh \
-    device/samsung/totoro/prebuilt/etc/usb_tether.sh:system/etc/usb_tether.sh
+    device/samsung/totoro/prebuilt/etc/usb_tether.sh:system/etc/usb_tether.sh \
+    device/samsung/totoro/prebuilt/etc/usb_portd.conf:system/etc/usb_portd.conf \
+    device/samsung/totoro/prebuilt/etc/asound.conf:system/etc/asound.conf \
+    device/samsung/totoro/prebuilt/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
+    device/samsung/totoro/prebuilt/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_SPEAKER_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_SPEAKER_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Rx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_WIRED_HEADSET_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_EARPIECE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
+    device/samsung/totoro/prebuilt/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt
 
 # module
 PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/modules/brcm-headsetsw.ko:system/lib/modules/brcm-headsetsw.ko \
     device/samsung/totoro/prebuilt/modules/bcm_headsetsw.ko:system/lib/modules/bcm_headsetsw.ko \
     device/samsung/totoro/prebuilt/modules/brcm_switch.ko:system/lib/modules/brcm_switch.ko \
-    device/samsung/totoro/prebuilt/modules/dhd.ko:system/lib/modules/dhd.ko \
+    device/samsung/totoro/prebuilt/modules/dhd.ko:system/lib/modules/bcm4330.ko \
     device/samsung/totoro/prebuilt/modules/ge_drv.ko:system/lib/modules/ge_drv.ko \
     device/samsung/totoro/prebuilt/modules/gememalloc.ko:system/lib/modules/gememalloc.ko \
     device/samsung/totoro/prebuilt/modules/h6270enc.ko:system/lib/modules/h6270enc.ko \
