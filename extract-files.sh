@@ -183,7 +183,6 @@ adb pull /system/lib/libdhwr.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietar
 adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libDHWRCN.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdprw.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
-adb pull /system/lib/libdrm2.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdrm2_jni.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libDWP.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libomadrm.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -346,7 +345,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libDHWRCN.so:system/lib/libDHWRCN.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdprw.so:system/lib/libdprw.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdrm2.so:system/lib/libdrm2.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdrm2_jni.so:system/lib/libdrm2_jni.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libDWP.so:system/lib/libDWP.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libomadrm.so:system/lib/libomadrm.so \\
