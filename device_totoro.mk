@@ -106,6 +106,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/init.gt-s5360.rc:root/init.gt-s5360.rc
 
 PRODUCT_COPY_FILES += \
+    device/samsung/totoro/egl.cfg:system/lib/egl.cfg \
     device/samsung/totoro/dhcpcd.conf:system/etc/dhcpcd.conf \
     device/samsung/totoro/vold.fstab:system/etc/vold.fstab \
     device/samsung/totoro/dbus.conf:system/etc/dbus.conf \
@@ -140,7 +141,6 @@ PRODUCT_COPY_FILES += \
 	device/samsung/totoro/wifi/wifi.conf:system/etc/wifi/wifi.conf \
 	device/samsung/totoro/wifi/iperf:system/etc/wifi/iperf \
 	device/samsung/totoro/wifi/RC_248_WPA.bin:system/etc/wifi/RC_248_WPA.bin \
-	device/samsung/totoro/prebuilt/get_macaddrs:system/bin/get_macaddrs \
 	device/samsung/totoro/prebuilt/btld:system/bin/btld \
 	device/samsung/totoro/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf 
 
@@ -155,6 +155,9 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/etc/logcfg.sh:system/etc/logcfg.sh \
     device/samsung/totoro/prebuilt/etc/modem.sh:system/etc/modem.sh \
     device/samsung/totoro/prebuilt/etc/rndis.sh:system/etc/rndis.sh \
+    device/samsung/totoro/prebuilt/etc/aacenc_image.bin:system/etc/aacenc_image.bin \
+    device/samsung/totoro/prebuilt/etc/setusbmode.txt:system/etc/setusbmode.txt \
+    device/samsung/totoro/prebuilt/etc/vold.conf:system/etc/vold.conf \
     device/samsung/totoro/prebuilt/etc/usbconfig.sh:system/etc/usbconfig.sh \
     device/samsung/totoro/prebuilt/etc/usb_tether.sh:system/etc/usb_tether.sh \
     device/samsung/totoro/prebuilt/etc/usb_portd.conf:system/etc/usb_portd.conf \

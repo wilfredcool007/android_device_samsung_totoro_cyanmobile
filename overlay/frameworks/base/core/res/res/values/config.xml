@@ -20,9 +20,11 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
+    <bool name="config_sf_limitedAlpha">true</bool>
 
-	<bool name="config_batterySdCardAccessibility">true</bool>
-
+    <bool name="config_batterySdCardAccessibility">true</bool>
+    <bool name="config_filterTouchEvents">true</bool>
+    <bool name="config_filterJumpyTouchEvents">true</bool>
     <!-- Use the new fancy screen off animation -->
     <bool name="config_animateScreenLights">false</bool>
 

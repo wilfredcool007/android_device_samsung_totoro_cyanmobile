@@ -23,6 +23,7 @@ mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/cameradata
 
 # rill
 adb pull /system/lib/libril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -83,6 +84,7 @@ adb pull /system/lib/libcameraservice.so ../../../vendor/$MANUFACTURER/$DEVICE/p
 adb pull /system/bin/BCM4330B1_002.001.003.0634.0652.hcd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/btld ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/ip ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/wpa_supplicant ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 
 # wifi
 adb pull /system/bin/mfgloader ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
@@ -173,17 +175,26 @@ adb pull /system/lib/libaccsensorcaltest.so ../../../vendor/$MANUFACTURER/$DEVIC
 
 # egl
 adb pull /system/lib/egl/libGLES_hgl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
-adb pull /system/lib/egl/egl.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
+adb pull /system/lib/egl/libGLES_android.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/egl
 adb pull /system/lib/libdhwr.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libDHWRCN.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdprw.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libdrm2_jni.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libDWP.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libGLESv1_CM.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libGLESv2.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libEGL.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libui.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libomadrm.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/libETC1.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libsisodrm.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/bcmtest_copy.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/libat.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+
+# camera data
+adb pull /system/cameradata/datapattern_front_420sp.yuv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/cameradata
+adb pull /system/cameradata/datapattern_420sp.yuv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/cameradata
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -253,6 +264,7 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/BCM4330B1_002.001.003.0634.0652.hcd:system/bin/BCM4330B1_002.001.003.0634.0652.hcd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ip:system/bin/ip
 
 ## Wifi
@@ -330,17 +342,28 @@ PRODUCT_COPY_FILES += \\
 ## 3D
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/egl/libGLES_hgl.so:system/lib/egl/libGLES_hgl.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/egl/egl.cfg:system/lib/egl/egl.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdhwr.so:system/lib/libdhwr.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libDHWRCN.so:system/lib/libDHWRCN.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdprw.so:system/lib/libdprw.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdrm2_jni.so:system/lib/libdrm2_jni.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libDWP.so:system/lib/libDWP.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLESv1_CM.so:system/lib/libGLESv1_CM.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLESv2.so:system/lib/libGLESv2.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libEGL.so:system/lib/libEGL.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libETC1.so:system/lib/libETC1.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libui.so:system/lib/libui.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libomadrm.so:system/lib/libomadrm.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsisodrm.so:system/lib/libsisodrm.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/bcmtest_copy.so:system/lib/bcmtest_copy.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libat.so:system/lib/libat.so
+
+
+# camera data
+PRODUCT_COPY_FILES += \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv
 
 ## Sensor
 PRODUCT_COPY_FILES += \\
