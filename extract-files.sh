@@ -118,6 +118,8 @@ adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUF
 adb pull /system/lib/libsoundalive.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 adb pull /system/lib/invoke_mock_media_player.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
+adb pull /system/lib/hw/alsa.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
+adb pull /system/lib/hw/acoustics.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
 
 # gps
 adb pull /system/lib/hw/gps.bcm21553.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/hw
@@ -322,7 +324,9 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_Samsung_Acoustic_Module_Llite.so:system/lib/lib_Samsung_Acoustic_Module_Llite.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsoundalive.so:system/lib/libsoundalive.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so:system/lib/lib_R2VS_ARM_GA_Library_for_EUROPA.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/invoke_mock_media_player.so:system/lib/invoke_mock_media_player.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/invoke_mock_media_player.so:system/lib/invoke_mock_media_player.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/alsa.default.so:system/lib/hw/alsa.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hw/acoustics.default.so:system/lib/hw/acoustics.default.so
 
 ##GPS
 PRODUCT_COPY_FILES += \\
