@@ -113,7 +113,6 @@ PRODUCT_COPY_FILES += \
 	device/samsung/totoro/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
 	device/samsung/totoro/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
 	device/samsung/totoro/prebuilt/keychars/sec_key.kcm.bin:system/usr/keychars/sec_key.kcm.bin \
-	device/samsung/totoro/prebuilt/icu/icudt44l.dat:system/usr/icu/icudt44l.dat \
 	device/samsung/totoro/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 	device/samsung/totoro/prebuilt/keylayout/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
 	device/samsung/totoro/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
