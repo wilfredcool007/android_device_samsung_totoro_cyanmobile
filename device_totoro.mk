@@ -37,15 +37,11 @@ PRODUCT_PACKAGES += \
     SamsungServiceMode \
     bdaddr_read \
     toggleshutter \
-    libui \
     alsa.default \
     acoustics.default \
     patchlcs \
-    overlay.default \
-    libhardware \
-    libhardware_legacy \
+    gralloc.totoro \
     rzscontrol \
-    libOmxCore \
     e2fsck \
     screencap
 
@@ -92,7 +88,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/totoro/ueventd.gt-s5360.rc:root/ueventd.gt-s5360.rc \
     device/samsung/totoro/prebuilt/fsr.ko:root/fsr.ko \
-    device/samsung/totoro/prebuilt/modules/dhd.ko:root/lib/modules/bcm4330.ko \
+    device/samsung/totoro/prebuilt/modules/dhd.ko:root/lib/modules/dhd.ko \
     device/samsung/totoro/prebuilt/fsr_stl.ko:root/fsr_stl.ko \
     device/samsung/totoro/prebuilt/rfs_fat.ko:root/rfs_fat.ko \
     device/samsung/totoro/prebuilt/rfs_glue.ko:root/rfs_glue.ko \
@@ -178,7 +174,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/totoro/prebuilt/modules/brcm-headsetsw.ko:system/lib/modules/brcm-headsetsw.ko \
     device/samsung/totoro/prebuilt/modules/bcm_headsetsw.ko:system/lib/modules/bcm_headsetsw.ko \
     device/samsung/totoro/prebuilt/modules/brcm_switch.ko:system/lib/modules/brcm_switch.ko \
-    device/samsung/totoro/prebuilt/modules/dhd.ko:system/lib/modules/bcm4330.ko \
+    device/samsung/totoro/prebuilt/modules/dhd.ko:system/lib/modules/dhd.ko \
     device/samsung/totoro/prebuilt/modules/ge_drv.ko:system/lib/modules/ge_drv.ko \
     device/samsung/totoro/prebuilt/modules/gememalloc.ko:system/lib/modules/gememalloc.ko \
     device/samsung/totoro/prebuilt/modules/h6270enc.ko:system/lib/modules/h6270enc.ko \

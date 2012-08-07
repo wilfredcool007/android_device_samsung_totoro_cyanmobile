@@ -31,7 +31,7 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 BOARD_FM_DEVICE := bcm4329
-
+TARGET_SENSORS_NO_OPEN_CHECK := true
 # Camera
 USE_CAMERA_STUB := true
 # we not need this (need haxx to the kernel)
@@ -95,11 +95,12 @@ BOARD_LDPI_RECOVERY := true
 BOARD_RECOVERY_HANDLES_MOUNT := true
 
 # Wifi
+CONFIG_DRIVER_BROADCOM := true
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-WPA_SUPPLICANT_VERSION      := VER_0_6_X
-BOARD_WLAN_DEVICE 	    := bcm4330
+WPA_SUPPLICANT_VERSION      := VER_0_5_X
+BOARD_WLAN_DEVICE 	    := dhd
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wifi/bcm4330_sta.bin"
 WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/bcm4330_aps.bin"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wifi/bcm4330_sta.bin nvram_path=/system/etc/wifi/nvram.txt"
-WIFI_DRIVER_MODULE_NAME     := "bcm4330"
+WIFI_DRIVER_MODULE_NAME     := "dhd"
