@@ -84,11 +84,12 @@ adb pull /system/lib/libcameraservice.so ../../../vendor/$MANUFACTURER/$DEVICE/p
 adb pull /system/bin/BCM4330B1_002.001.003.0634.0652.hcd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/btld ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/ip ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
-adb pull /system/bin/wpa_supplicant ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 
 # wifi
 adb pull /system/bin/mfgloader ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
 adb pull /system/bin/wlandutservice ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/bin/wpa_supplicant ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+adb pull /system/lib/libwpa_client.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
 
 #audio port 
 adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib
@@ -264,14 +265,15 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/BCM4330B1_002.001.003.0634.0652.hcd:system/bin/BCM4330B1_002.001.003.0634.0652.hcd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ip:system/bin/ip
 
 ## Wifi
 PRODUCT_COPY_FILES += \
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wlandutservice:system/bin/wlandutservice
-	
+
 ## charging
 PRODUCT_COPY_FILES += \
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/media/battery_charging_5.qmg:system/media/battery_charging_5.qmg \\
