@@ -22,6 +22,10 @@ mount ext4 /dev/stl10 /cache nosuid nodev noatime barrier=1
 
 on post-fs
 
+## CyanMobile
+    setprop persist.sys.gmaps_hack 1
+    setprop ro.squadzone.build 1
+
 # permissions for system server and daemons (accelerometer & magnetic & proximity)
     mkdir /data/misc/sensors 0777 system misc
 
